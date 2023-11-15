@@ -1,0 +1,49 @@
+.Navigation {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	font-size: 20px;
+}
+
+.List {
+	display: flex;
+	align-items: center;
+	gap: 5px 20px;
+
+	@media (max-width: 1200px) {
+		position: absolute;
+		top: 100%;
+		left: 0;
+
+		flex-direction: column;
+		width: 100%;
+		padding: 15px;
+		border-top: 1px solid var(--primary);
+
+		transform: scaleY(0.2) scaleX(0.8);
+		transform-origin: top;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: 0.4s ease-in-out;
+
+		background: white;
+	}
+
+	&.Show {
+		transform: scaleY(1) scaleX(1);
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+}
+
+.Link {
+	display: block;
+	padding: 5px;
+
+	&.Active {
+		color: var(--primary);
+	}
+}

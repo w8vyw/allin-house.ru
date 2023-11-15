@@ -1,0 +1,28 @@
+.Heading {
+	color: var(--secondary);
+	font-weight: 700;
+
+	&.Size1 {
+		font-size: 40px;
+
+		@media (max-width: 992px) {
+			font-size: 26px;
+		}
+	}
+
+	&.Size2 {
+		font-size: 28px;
+
+		@media (max-width: 992px) {
+			font-size: 23px;
+		}
+	}
+
+	&.Size3 {
+		font-size: 24px;
+
+		@media (max-width: 992px) {
+			font-size: 20px;
+		}
+	}
+}

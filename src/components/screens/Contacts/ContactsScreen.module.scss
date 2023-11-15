@@ -1,0 +1,101 @@
+.Container {
+	display: flex;
+	align-items: flex-start;
+	gap: 60px;
+
+	@media (max-width: 1450px) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 16px;
+	}
+}
+
+.Text {
+	@media (max-width: 1450px) {
+		width: 100%;
+		max-width: 950px;
+	}
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.Image {
+	max-width: 750px;
+	flex-shrink: 0;
+	height: auto;
+
+	@media (max-width: 1450px) {
+		max-width: 100%;
+	}
+}
+
+.Heading {
+	margin: 40px 0;
+
+	@media (max-width: 1450px) {
+		margin: 0 0 40px 0;
+	}
+}
+
+.LinksList {
+	margin-bottom: 40px;
+}
+
+.Link {
+	display: block;
+	padding: 5px;
+
+	color: var(--primary);
+}
+
+.Title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+
+	@media (max-width: 768px) {
+		font-size: 20px;
+	}
+}
+
+.Subtitle {
+	font-size: 20px;
+	margin-bottom: 10px;
+
+	@media (max-width: 768px) {
+		font-size: 18px;
+	}
+}
+
+.List {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.Item {
+	position: relative;
+
+	padding-left: 20px;
+
+	&:before {
+		content: '';
+
+		position: absolute;
+		top: 50%;
+		left: 0;
+
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+
+		background: var(--secondary);
+
+		transform: translateY(-50%);
+	}
+}

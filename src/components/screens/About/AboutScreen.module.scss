@@ -1,0 +1,43 @@
+.Container {
+	min-height: 583px;
+
+	background: url('/images/about.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+
+	@media (max-width: 576px) {
+		min-height: auto;
+
+		background: none;
+	}
+}
+
+.TextContainer {
+	max-width: 485px;
+	margin: 0 auto;
+	padding: 55px 20px;
+
+	@media (max-width: 576px) {
+		padding: 0;
+	}
+}
+
+.Heading {
+	margin-bottom: 15px;
+}
+
+.Text {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	font-size: 17px;
+
+	@media (max-width: 768px) {
+		font-size: 16px;
+	}
+
+	strong {
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,111 @@
+.Container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-size: 20px;
+
+	@media (max-width: 768px) {
+		font-size: 18px;
+	}
+}
+
+.Heading {
+	margin-bottom: 40px;
+
+	text-align: center;
+	text-wrap: balance;
+}
+
+.Form {
+	margin: 0 auto;
+}
+
+.Label {
+	display: block;
+	margin-bottom: 5px;
+
+	font-size: 18px;
+
+	@media (max-width: 768px) {
+		font-size: 16px;
+	}
+
+	&.Error {
+		color: #e51d29;
+	}
+}
+
+.Field {
+	display: block;
+	width: 330px;
+	margin-bottom: 20px;
+	padding: 15px 30px;
+	border-radius: 50px;
+
+	border: 2px solid var(--secondary);
+
+	transition: 0.5s ease-in-out;
+
+	&.Error {
+		border: 2px solid #e51d29;
+	}
+}
+
+.FieldErrorMessage {
+	color: #e51d29;
+	font-weight: 500;
+}
+
+.SubmitButton {
+	display: block;
+	margin: 0 auto;
+	padding: 15px 45px;
+
+	font-weight: 500;
+
+	color: white;
+
+	background: var(--secondary);
+	border-radius: 50px;
+
+	transition: 0.5s ease-in-out;
+
+	&:disabled {
+		background: black;
+	}
+}
+
+.DispatchStatus {
+	max-width: 440px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+
+	text-align: center;
+
+	transform: scale(0.5);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform-origin: center;
+	transition: 0.3s ease-in-out;
+
+	&.Active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+}
+
+.DispatchStatusIcon {
+	width: 80px;
+	height: 80px;
+}
+
+.DispatchStatusText {
+	font-size: 28px;
+}

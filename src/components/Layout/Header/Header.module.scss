@@ -1,0 +1,24 @@
+.Header {
+	position: relative;
+
+	margin-bottom: 20px;
+	padding: 25px 0;
+
+	@media (max-width: 992px) {
+		padding: 18px 0;
+	}
+
+	@media (max-width: 768px) {
+		padding: 15px 0;
+	}
+}
+
+.Container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Logo {
+	margin-right: auto;
+}
